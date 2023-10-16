@@ -18,7 +18,7 @@ public class detecte : MonoBehaviour
     private void Attack()
     {
         Vector2 boxSize = new Vector2(5f, 4f);
-        Vector2 offset = new Vector2(0f, 0f);
+        Vector2 offset = new Vector2(1f, 1f);
         float angle = 0f;
         Collider2D hit = Physics2D.OverlapBox((Vector2)transform.position + offset, boxSize, angle, playerLayer);
 
@@ -36,7 +36,7 @@ public class detecte : MonoBehaviour
     private void ShowDialogue()
     {
         Vector2 boxSize = new Vector2(25f, 4f);
-        Vector2 offset = new Vector2(0f, 0f);
+        Vector2 offset = new Vector2(1f, 1f);
         float angle = 0f;
         Collider2D hit = Physics2D.OverlapBox((Vector2)transform.position + offset, boxSize, angle, playerLayer);
     
@@ -55,8 +55,8 @@ public class detecte : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Vector2 boxSize = new Vector2(5f,4f);
-        Vector2 offset = new Vector2(0f, 0f);
+        Vector2 boxSize = new Vector2(25f, 4f);
+        Vector2 offset = new Vector2(1f,1f);
 
         Gizmos.color = lastHit != null ? Color.green : Color.red;
         Gizmos.DrawWireCube((Vector2)transform.position + offset, boxSize);
