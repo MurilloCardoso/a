@@ -22,9 +22,8 @@ public class status : MonoBehaviour
 
         if (LifeStatus < 1)
         {
-            UiDeath.SetActive(true);
+           // UiDeath.SetActive(true);
             
-
         }
    
         LifeUI.text = "" + LifeStatus;
@@ -32,6 +31,6 @@ public class status : MonoBehaviour
     }
     public void OnResetGame()
     {   
-            SceneManager.LoadScene("teste");
+       SceneManager.LoadScene("teste");
     }
 }

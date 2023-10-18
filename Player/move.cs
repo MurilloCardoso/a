@@ -7,7 +7,7 @@ public class move : MonoBehaviour
 
     [SerializeField]
     private Rigidbody2D rb;
-
+    public int damage = 10;
     [SerializeField]
     private float velocity;
 
@@ -20,7 +20,7 @@ public class move : MonoBehaviour
     private Transform groundCheck;
     
     private bool isJumping = false;
-
+    public detecte DTT;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -28,6 +28,7 @@ public class move : MonoBehaviour
 
     void Update()
     {
+        
         HandleInput();
         Flip();
     }
@@ -65,6 +66,20 @@ public class move : MonoBehaviour
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Inimigo"))
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+          
+                 DTT.setHitDamage(50);
+            }
+        }
+    }
+  
+
     private void Flip()
     {
         if (isFacingRight && _directon<0f || !isFacingRight && _directon >0f)

@@ -1,17 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class detecte : MonoBehaviour
 {
     public float dialogueRange;
     public LayerMask playerLayer;
     public GameObject player;
+    public GameObject enemie;
     public float moveSpeed = 5f;
     private Collider2D lastHit;
     public status lifeStatus;
+    public int lifeEnimie =100;
+
     private void FixedUpdate()
     {
+        if (lifeEnimie<1)
+        {
+         
+            Destroy(this.gameObject);
+        }
         ShowDialogue();
         Attack();
     }
@@ -27,7 +34,7 @@ public class detecte : MonoBehaviour
             if (player != null && lifeStatus.LifeStatus >0)
             {
               
-                lifeStatus.LifeStatus = lifeStatus.LifeStatus - 10;
+              lifeStatus.LifeStatus = lifeStatus.LifeStatus - 10;
             }
         }
 
@@ -52,7 +59,11 @@ public class detecte : MonoBehaviour
 
         lastHit = hit;
     }
-
+    public void setHitDamage(int dano)
+    {
+        Debug.Log(lifeEnimie);
+        lifeEnimie = lifeEnimie - dano;
+    }
     private void OnDrawGizmosSelected()
     {
         Vector2 boxSize = new Vector2(25f, 4f);

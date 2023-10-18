@@ -569,7 +569,7 @@ Transform:
   m_GameObject: {fileID: 810549443}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.02, y: -0.29, z: -10}
+  m_LocalPosition: {x: 29.83, y: -0.33, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -610,8 +610,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 97, y: 124}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -470.49597, y: 233.77716}
+  m_SizeDelta: {x: 26.5427, y: 18.8014}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &936814977
 MonoBehaviour:
@@ -970,7 +970,7 @@ Transform:
   m_GameObject: {fileID: 1498163567}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.02, y: -0.29, z: -10}
+  m_LocalPosition: {x: 29.83, y: -0.33, z: -10}
   m_LocalScale: {x: 1, y: 3.2687, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1104,7 +1104,7 @@ GameObject:
   - component: {fileID: 1696171864}
   m_Layer: 0
   m_Name: enemie
-  m_TagString: Untagged
+  m_TagString: Inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1242,7 +1242,7 @@ Transform:
   m_GameObject: {fileID: 1696171859}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.5, y: -0.10000014, z: 0}
+  m_LocalPosition: {x: 33.83, y: 0.26, z: 0}
   m_LocalScale: {x: 1, y: 2.9843, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1265,7 +1265,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   player: {fileID: 2091372554}
-  moveSpeed: 5
+  moveSpeed: 3
   lifeStatus: {fileID: 2091372560}
 --- !u!1 &1772176219
 GameObject:
@@ -1472,6 +1472,7 @@ GameObject:
   - component: {fileID: 2091372559}
   - component: {fileID: 2091372560}
   - component: {fileID: 2091372561}
+  - component: {fileID: 2091372562}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -1612,7 +1613,7 @@ Transform:
   m_GameObject: {fileID: 2091372554}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.02, y: -0.29, z: 0}
+  m_LocalPosition: {x: 29.83, y: -0.33, z: 0}
   m_LocalScale: {x: 1, y: 3.2687, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1631,6 +1632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2091372555}
+  damage: 10
   velocity: 5
   jumpForce: 5
   groundLayer:
@@ -1668,6 +1670,41 @@ MonoBehaviour:
   rollDuration: 0.5
   boostForce: 55
   rb: {fileID: 2091372555}
+--- !u!70 &2091372562
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091372554}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.75, y: 0}
+  m_Size: {x: 1.94, y: 1}
+  m_Direction: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
